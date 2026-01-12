@@ -1,0 +1,15 @@
+meta {
+  name: Usage Stats
+  type: http
+  seq: 6
+}
+
+get {
+  url: http://localhost:3000/admin/stats
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

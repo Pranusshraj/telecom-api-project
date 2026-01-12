@@ -9,6 +9,42 @@ app.use(express.json());
 const getDb = () => JSON.parse(fs.readFileSync('./db.json', 'utf-8'));
 const saveDb = (data) => fs.writeFileSync('./db.json', JSON.stringify(data, null, 2));
 
+// Middleware for API Key Validation AND Usage Tracking
+app.use((req, res, next) => {
+    const userApiKey = req.header('x-api-key');
+    const db = JSON.parse(fs.readFileSync('./db.json', 'utf-8'));
+
+    // 1. Basic Security Check
+    if (!userApiKey || userApiKey !== 'telecom-secret-2026') {
+        return res.status(401).json({ error: "Unauthorized access" });
+    }
+
+    // 2. Usage Tracking Logic
+    // We've added a 'usage' object in our db.json to track keys
+    if (!db.usage) db.usage = {};
+    if (!db.usage[userApiKey]) db.usage[userApiKey] = 0;
+
+    // Increment the counter for this specific key
+    db.usage[userApiKey]++;
+
+    // Save the updated count back to the file
+    fs.writeFileSync('./db.json', JSON.stringify(db, null, 2));
+
+    console.log(`📊 Usage Tracked: Key [${userApiKey}] has made ${db.usage[userApiKey]} requests.`);
+    
+    next();
+});
+
+// Admin route to check usage stats
+app.get('/admin/stats', (req, res) => {
+    const db = JSON.parse(fs.readFileSync('./db.json', 'utf-8'));
+    res.json({
+        service_name: "Telecom Gateway",
+        usage_metrics: db.usage
+    });
+});
+// ** Include Rate limiting - The max no. of requests that a user can rise in a session
+
 // --- 1. GET ALL (With Optional Filtering) ---
 app.get('/subscribers', (req, res) => {
     const db = getDb();

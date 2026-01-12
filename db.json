@@ -908,5 +908,8 @@
       "status": "Active"
     }
   ],
-  "transactions": []
+  "transactions": [],
+  "usage": {
+    "telecom-secret-2026": 3
+  }
 }
