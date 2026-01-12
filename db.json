@@ -1,0 +1,912 @@
+{
+  "subscribers": [
+    {
+      "id": "1",
+      "phoneNumber": "9884010001",
+      "name": "Subscriber 1",
+      "plan": "Data-Max-5G",
+      "status": "Active",
+      "dataBalanceGB": 23.68,
+      "lastRechargeDate": "2026-01-09"
+    },
+    {
+      "id": "3",
+      "phoneNumber": "9884010003",
+      "name": "Subscriber 3",
+      "plan": "Data-Max-5G",
+      "status": "Pending",
+      "dataBalanceGB": 22.49,
+      "lastRechargeDate": "2026-01-04"
+    },
+    {
+      "id": "4",
+      "phoneNumber": "9884010004",
+      "name": "Subscriber 4",
+      "plan": "Basic-Voice",
+      "status": "Active",
+      "dataBalanceGB": 19.14,
+      "lastRechargeDate": "2026-01-07"
+    },
+    {
+      "id": "5",
+      "phoneNumber": "9884010005",
+      "name": "Subscriber 5",
+      "plan": "Unlimited-Pro",
+      "status": "Suspended",
+      "dataBalanceGB": 6.65,
+      "lastRechargeDate": "2026-01-08"
+    },
+    {
+      "id": "6",
+      "phoneNumber": "9884010006",
+      "name": "Subscriber 6",
+      "plan": "Basic-Voice",
+      "status": "Active",
+      "dataBalanceGB": 7.06,
+      "lastRechargeDate": "2026-01-03"
+    },
+    {
+      "id": "7",
+      "phoneNumber": "9884010007",
+      "name": "Subscriber 7",
+      "plan": "Family-Share",
+      "status": "Suspended",
+      "dataBalanceGB": 16,
+      "lastRechargeDate": "2026-01-10"
+    },
+    {
+      "id": "8",
+      "phoneNumber": "9884010008",
+      "name": "Subscriber 8",
+      "plan": "Data-Max-5G",
+      "status": "Pending",
+      "dataBalanceGB": 25.8,
+      "lastRechargeDate": "2026-01-07"
+    },
+    {
+      "id": "9",
+      "phoneNumber": "9884010009",
+      "name": "Subscriber 9",
+      "plan": "Unlimited-Pro",
+      "status": "Expired",
+      "dataBalanceGB": 37.01,
+      "lastRechargeDate": "2026-01-02"
+    },
+    {
+      "id": "10",
+      "phoneNumber": "9884010010",
+      "name": "Subscriber 10",
+      "plan": "Data-Max-5G",
+      "status": "Active",
+      "dataBalanceGB": 2.97,
+      "lastRechargeDate": "2026-01-09"
+    },
+    {
+      "id": "11",
+      "phoneNumber": "9884010011",
+      "name": "Subscriber 11",
+      "plan": "Family-Share",
+      "status": "Active",
+      "dataBalanceGB": 29.76,
+      "lastRechargeDate": "2026-01-11"
+    },
+    {
+      "id": "12",
+      "phoneNumber": "9884010012",
+      "name": "Subscriber 12",
+      "plan": "Family-Share",
+      "status": "Expired",
+      "dataBalanceGB": 33.23,
+      "lastRechargeDate": "2026-01-04"
+    },
+    {
+      "id": "13",
+      "phoneNumber": "9884010013",
+      "name": "Subscriber 13",
+      "plan": "Basic-Voice",
+      "status": "Suspended",
+      "dataBalanceGB": 25.47,
+      "lastRechargeDate": "2026-01-09"
+    },
+    {
+      "id": "14",
+      "phoneNumber": "9884010014",
+      "name": "Subscriber 14",
+      "plan": "Basic-Voice",
+      "status": "Active",
+      "dataBalanceGB": 0.99,
+      "lastRechargeDate": "2026-01-11"
+    },
+    {
+      "id": "15",
+      "phoneNumber": "9884010015",
+      "name": "Subscriber 15",
+      "plan": "Unlimited-Pro",
+      "status": "Pending",
+      "dataBalanceGB": 0.13,
+      "lastRechargeDate": "2026-01-03"
+    },
+    {
+      "id": "16",
+      "phoneNumber": "9884010016",
+      "name": "Subscriber 16",
+      "plan": "Data-Max-5G",
+      "status": "Expired",
+      "dataBalanceGB": 3.26,
+      "lastRechargeDate": "2026-01-11"
+    },
+    {
+      "id": "17",
+      "phoneNumber": "9884010017",
+      "name": "Subscriber 17",
+      "plan": "Basic-Voice",
+      "status": "Active",
+      "dataBalanceGB": 10.4,
+      "lastRechargeDate": "2026-01-11"
+    },
+    {
+      "id": "18",
+      "phoneNumber": "9884010018",
+      "name": "Subscriber 18",
+      "plan": "Data-Max-5G",
+      "status": "Suspended",
+      "dataBalanceGB": 24.41,
+      "lastRechargeDate": "2026-01-08"
+    },
+    {
+      "id": "19",
+      "phoneNumber": "9884010019",
+      "name": "Subscriber 19",
+      "plan": "Family-Share",
+      "status": "Suspended",
+      "dataBalanceGB": 16.8,
+      "lastRechargeDate": "2026-01-10"
+    },
+    {
+      "id": "20",
+      "phoneNumber": "9884010020",
+      "name": "Subscriber 20",
+      "plan": "Data-Max-5G",
+      "status": "Active",
+      "dataBalanceGB": 34.18,
+      "lastRechargeDate": "2026-01-09"
+    },
+    {
+      "id": "21",
+      "phoneNumber": "9884010021",
+      "name": "Subscriber 21",
+      "plan": "Data-Max-5G",
+      "status": "Suspended",
+      "dataBalanceGB": 49.91,
+      "lastRechargeDate": "2026-01-09"
+    },
+    {
+      "id": "22",
+      "phoneNumber": "9884010022",
+      "name": "Subscriber 22",
+      "plan": "Basic-Voice",
+      "status": "Expired",
+      "dataBalanceGB": 18.47,
+      "lastRechargeDate": "2026-01-01"
+    },
+    {
+      "id": "23",
+      "phoneNumber": "9884010023",
+      "name": "Subscriber 23",
+      "plan": "Basic-Voice",
+      "status": "Active",
+      "dataBalanceGB": 0.75,
+      "lastRechargeDate": "2026-01-08"
+    },
+    {
+      "id": "24",
+      "phoneNumber": "9884010024",
+      "name": "Subscriber 24",
+      "plan": "Basic-Voice",
+      "status": "Active",
+      "dataBalanceGB": 7.7,
+      "lastRechargeDate": "2026-01-08"
+    },
+    {
+      "id": "25",
+      "phoneNumber": "9884010025",
+      "name": "Subscriber 25",
+      "plan": "Basic-Voice",
+      "status": "Suspended",
+      "dataBalanceGB": 29.35,
+      "lastRechargeDate": "2026-01-02"
+    },
+    {
+      "id": "26",
+      "phoneNumber": "9884010026",
+      "name": "Subscriber 26",
+      "plan": "Family-Share",
+      "status": "Suspended",
+      "dataBalanceGB": 26.18,
+      "lastRechargeDate": "2026-01-09"
+    },
+    {
+      "id": "27",
+      "phoneNumber": "9884010027",
+      "name": "Subscriber 27",
+      "plan": "Data-Max-5G",
+      "status": "Active",
+      "dataBalanceGB": 15.25,
+      "lastRechargeDate": "2026-01-10"
+    },
+    {
+      "id": "28",
+      "phoneNumber": "9884010028",
+      "name": "Subscriber 28",
+      "plan": "Family-Share",
+      "status": "Expired",
+      "dataBalanceGB": 0.8,
+      "lastRechargeDate": "2026-01-04"
+    },
+    {
+      "id": "29",
+      "phoneNumber": "9884010029",
+      "name": "Subscriber 29",
+      "plan": "Data-Max-5G",
+      "status": "Suspended",
+      "dataBalanceGB": 9.23,
+      "lastRechargeDate": "2026-01-11"
+    },
+    {
+      "id": "30",
+      "phoneNumber": "9884010030",
+      "name": "Subscriber 30",
+      "plan": "Data-Max-5G",
+      "status": "Pending",
+      "dataBalanceGB": 2.42,
+      "lastRechargeDate": "2026-01-11"
+    },
+    {
+      "id": "31",
+      "phoneNumber": "9884010031",
+      "name": "Subscriber 31",
+      "plan": "Unlimited-Pro",
+      "status": "Active",
+      "dataBalanceGB": 11.21,
+      "lastRechargeDate": "2026-01-03"
+    },
+    {
+      "id": "32",
+      "phoneNumber": "9884010032",
+      "name": "Subscriber 32",
+      "plan": "Basic-Voice",
+      "status": "Active",
+      "dataBalanceGB": 5.46,
+      "lastRechargeDate": "2026-01-02"
+    },
+    {
+      "id": "33",
+      "phoneNumber": "9884010033",
+      "name": "Subscriber 33",
+      "plan": "Data-Max-5G",
+      "status": "Pending",
+      "dataBalanceGB": 49.89,
+      "lastRechargeDate": "2026-01-03"
+    },
+    {
+      "id": "34",
+      "phoneNumber": "9884010034",
+      "name": "Subscriber 34",
+      "plan": "Data-Max-5G",
+      "status": "Pending",
+      "dataBalanceGB": 23.67,
+      "lastRechargeDate": "2026-01-03"
+    },
+    {
+      "id": "35",
+      "phoneNumber": "9884010035",
+      "name": "Subscriber 35",
+      "plan": "Basic-Voice",
+      "status": "Active",
+      "dataBalanceGB": 15.35,
+      "lastRechargeDate": "2026-01-02"
+    },
+    {
+      "id": "36",
+      "phoneNumber": "9884010036",
+      "name": "Subscriber 36",
+      "plan": "Basic-Voice",
+      "status": "Suspended",
+      "dataBalanceGB": 39.34,
+      "lastRechargeDate": "2026-01-03"
+    },
+    {
+      "id": "37",
+      "phoneNumber": "9884010037",
+      "name": "Subscriber 37",
+      "plan": "Data-Max-5G",
+      "status": "Expired",
+      "dataBalanceGB": 44.5,
+      "lastRechargeDate": "2026-01-09"
+    },
+    {
+      "id": "38",
+      "phoneNumber": "9884010038",
+      "name": "Subscriber 38",
+      "plan": "Family-Share",
+      "status": "Suspended",
+      "dataBalanceGB": 33.84,
+      "lastRechargeDate": "2026-01-09"
+    },
+    {
+      "id": "39",
+      "phoneNumber": "9884010039",
+      "name": "Subscriber 39",
+      "plan": "Unlimited-Pro",
+      "status": "Pending",
+      "dataBalanceGB": 47.73,
+      "lastRechargeDate": "2026-01-03"
+    },
+    {
+      "id": "40",
+      "phoneNumber": "9884010040",
+      "name": "Subscriber 40",
+      "plan": "Unlimited-Pro",
+      "status": "Expired",
+      "dataBalanceGB": 35.8,
+      "lastRechargeDate": "2025-12-31"
+    },
+    {
+      "id": "41",
+      "phoneNumber": "9884010041",
+      "name": "Subscriber 41",
+      "plan": "Unlimited-Pro",
+      "status": "Expired",
+      "dataBalanceGB": 25.35,
+      "lastRechargeDate": "2026-01-11"
+    },
+    {
+      "id": "42",
+      "phoneNumber": "9884010042",
+      "name": "Subscriber 42",
+      "plan": "Basic-Voice",
+      "status": "Expired",
+      "dataBalanceGB": 30.67,
+      "lastRechargeDate": "2026-01-09"
+    },
+    {
+      "id": "43",
+      "phoneNumber": "9884010043",
+      "name": "Subscriber 43",
+      "plan": "Family-Share",
+      "status": "Suspended",
+      "dataBalanceGB": 42.31,
+      "lastRechargeDate": "2026-01-03"
+    },
+    {
+      "id": "44",
+      "phoneNumber": "9884010044",
+      "name": "Subscriber 44",
+      "plan": "Basic-Voice",
+      "status": "Expired",
+      "dataBalanceGB": 12.69,
+      "lastRechargeDate": "2026-01-05"
+    },
+    {
+      "id": "45",
+      "phoneNumber": "9884010045",
+      "name": "Subscriber 45",
+      "plan": "Data-Max-5G",
+      "status": "Pending",
+      "dataBalanceGB": 12.91,
+      "lastRechargeDate": "2026-01-01"
+    },
+    {
+      "id": "46",
+      "phoneNumber": "9884010046",
+      "name": "Subscriber 46",
+      "plan": "Data-Max-5G",
+      "status": "Pending",
+      "dataBalanceGB": 34.61,
+      "lastRechargeDate": "2026-01-07"
+    },
+    {
+      "id": "47",
+      "phoneNumber": "9884010047",
+      "name": "Subscriber 47",
+      "plan": "Unlimited-Pro",
+      "status": "Expired",
+      "dataBalanceGB": 15.99,
+      "lastRechargeDate": "2026-01-09"
+    },
+    {
+      "id": "48",
+      "phoneNumber": "9884010048",
+      "name": "Subscriber 48",
+      "plan": "Data-Max-5G",
+      "status": "Suspended",
+      "dataBalanceGB": 6.61,
+      "lastRechargeDate": "2026-01-11"
+    },
+    {
+      "id": "49",
+      "phoneNumber": "9884010049",
+      "name": "Subscriber 49",
+      "plan": "Unlimited-Pro",
+      "status": "Active",
+      "dataBalanceGB": 34.37,
+      "lastRechargeDate": "2026-01-01"
+    },
+    {
+      "id": "50",
+      "phoneNumber": "9884010050",
+      "name": "Subscriber 50",
+      "plan": "Unlimited-Pro",
+      "status": "Active",
+      "dataBalanceGB": 28.39,
+      "lastRechargeDate": "2026-01-07"
+    },
+    {
+      "id": "51",
+      "phoneNumber": "9884010051",
+      "name": "Subscriber 51",
+      "plan": "Family-Share",
+      "status": "Pending",
+      "dataBalanceGB": 29.53,
+      "lastRechargeDate": "2026-01-10"
+    },
+    {
+      "id": "52",
+      "phoneNumber": "9884010052",
+      "name": "Subscriber 52",
+      "plan": "Unlimited-Pro",
+      "status": "Active",
+      "dataBalanceGB": 47.38,
+      "lastRechargeDate": "2026-01-10"
+    },
+    {
+      "id": "53",
+      "phoneNumber": "9884010053",
+      "name": "Subscriber 53",
+      "plan": "Basic-Voice",
+      "status": "Expired",
+      "dataBalanceGB": 5.11,
+      "lastRechargeDate": "2026-01-04"
+    },
+    {
+      "id": "54",
+      "phoneNumber": "9884010054",
+      "name": "Subscriber 54",
+      "plan": "Unlimited-Pro",
+      "status": "Active",
+      "dataBalanceGB": 18.33,
+      "lastRechargeDate": "2026-01-09"
+    },
+    {
+      "id": "55",
+      "phoneNumber": "9884010055",
+      "name": "Subscriber 55",
+      "plan": "Data-Max-5G",
+      "status": "Pending",
+      "dataBalanceGB": 0.49,
+      "lastRechargeDate": "2026-01-06"
+    },
+    {
+      "id": "56",
+      "phoneNumber": "9884010056",
+      "name": "Subscriber 56",
+      "plan": "Data-Max-5G",
+      "status": "Suspended",
+      "dataBalanceGB": 42.11,
+      "lastRechargeDate": "2026-01-09"
+    },
+    {
+      "id": "57",
+      "phoneNumber": "9884010057",
+      "name": "Subscriber 57",
+      "plan": "Family-Share",
+      "status": "Active",
+      "dataBalanceGB": 46.95,
+      "lastRechargeDate": "2026-01-09"
+    },
+    {
+      "id": "58",
+      "phoneNumber": "9884010058",
+      "name": "Subscriber 58",
+      "plan": "Data-Max-5G",
+      "status": "Active",
+      "dataBalanceGB": 13.87,
+      "lastRechargeDate": "2026-01-12"
+    },
+    {
+      "id": "59",
+      "phoneNumber": "9884010059",
+      "name": "Subscriber 59",
+      "plan": "Unlimited-Pro",
+      "status": "Expired",
+      "dataBalanceGB": 41.07,
+      "lastRechargeDate": "2026-01-05"
+    },
+    {
+      "id": "60",
+      "phoneNumber": "9884010060",
+      "name": "Subscriber 60",
+      "plan": "Family-Share",
+      "status": "Pending",
+      "dataBalanceGB": 5.41,
+      "lastRechargeDate": "2026-01-01"
+    },
+    {
+      "id": "61",
+      "phoneNumber": "9884010061",
+      "name": "Subscriber 61",
+      "plan": "Data-Max-5G",
+      "status": "Pending",
+      "dataBalanceGB": 9.42,
+      "lastRechargeDate": "2026-01-06"
+    },
+    {
+      "id": "62",
+      "phoneNumber": "9884010062",
+      "name": "Subscriber 62",
+      "plan": "Basic-Voice",
+      "status": "Expired",
+      "dataBalanceGB": 29.25,
+      "lastRechargeDate": "2026-01-05"
+    },
+    {
+      "id": "63",
+      "phoneNumber": "9884010063",
+      "name": "Subscriber 63",
+      "plan": "Unlimited-Pro",
+      "status": "Pending",
+      "dataBalanceGB": 28.93,
+      "lastRechargeDate": "2026-01-12"
+    },
+    {
+      "id": "64",
+      "phoneNumber": "9884010064",
+      "name": "Subscriber 64",
+      "plan": "Basic-Voice",
+      "status": "Pending",
+      "dataBalanceGB": 11.24,
+      "lastRechargeDate": "2026-01-04"
+    },
+    {
+      "id": "65",
+      "phoneNumber": "9884010065",
+      "name": "Subscriber 65",
+      "plan": "Family-Share",
+      "status": "Pending",
+      "dataBalanceGB": 23.76,
+      "lastRechargeDate": "2026-01-10"
+    },
+    {
+      "id": "66",
+      "phoneNumber": "9884010066",
+      "name": "Subscriber 66",
+      "plan": "Basic-Voice",
+      "status": "Pending",
+      "dataBalanceGB": 19.68,
+      "lastRechargeDate": "2026-01-11"
+    },
+    {
+      "id": "67",
+      "phoneNumber": "9884010067",
+      "name": "Subscriber 67",
+      "plan": "Family-Share",
+      "status": "Active",
+      "dataBalanceGB": 34.08,
+      "lastRechargeDate": "2026-01-05"
+    },
+    {
+      "id": "68",
+      "phoneNumber": "9884010068",
+      "name": "Subscriber 68",
+      "plan": "Unlimited-Pro",
+      "status": "Pending",
+      "dataBalanceGB": 34.15,
+      "lastRechargeDate": "2026-01-07"
+    },
+    {
+      "id": "69",
+      "phoneNumber": "9884010069",
+      "name": "Subscriber 69",
+      "plan": "Data-Max-5G",
+      "status": "Active",
+      "dataBalanceGB": 15.05,
+      "lastRechargeDate": "2026-01-08"
+    },
+    {
+      "id": "70",
+      "phoneNumber": "9884010070",
+      "name": "Subscriber 70",
+      "plan": "Unlimited-Pro",
+      "status": "Expired",
+      "dataBalanceGB": 31.54,
+      "lastRechargeDate": "2026-01-07"
+    },
+    {
+      "id": "71",
+      "phoneNumber": "9884010071",
+      "name": "Subscriber 71",
+      "plan": "Basic-Voice",
+      "status": "Expired",
+      "dataBalanceGB": 45.52,
+      "lastRechargeDate": "2026-01-06"
+    },
+    {
+      "id": "72",
+      "phoneNumber": "9884010072",
+      "name": "Subscriber 72",
+      "plan": "Basic-Voice",
+      "status": "Active",
+      "dataBalanceGB": 17.06,
+      "lastRechargeDate": "2026-01-10"
+    },
+    {
+      "id": "73",
+      "phoneNumber": "9884010073",
+      "name": "Subscriber 73",
+      "plan": "Data-Max-5G",
+      "status": "Expired",
+      "dataBalanceGB": 38.43,
+      "lastRechargeDate": "2026-01-12"
+    },
+    {
+      "id": "74",
+      "phoneNumber": "9884010074",
+      "name": "Subscriber 74",
+      "plan": "Unlimited-Pro",
+      "status": "Pending",
+      "dataBalanceGB": 34.12,
+      "lastRechargeDate": "2026-01-04"
+    },
+    {
+      "id": "75",
+      "phoneNumber": "9884010075",
+      "name": "Subscriber 75",
+      "plan": "Data-Max-5G",
+      "status": "Pending",
+      "dataBalanceGB": 38.41,
+      "lastRechargeDate": "2026-01-05"
+    },
+    {
+      "id": "76",
+      "phoneNumber": "9884010076",
+      "name": "Subscriber 76",
+      "plan": "Data-Max-5G",
+      "status": "Suspended",
+      "dataBalanceGB": 6.1,
+      "lastRechargeDate": "2026-01-08"
+    },
+    {
+      "id": "77",
+      "phoneNumber": "9884010077",
+      "name": "Subscriber 77",
+      "plan": "Family-Share",
+      "status": "Suspended",
+      "dataBalanceGB": 47.8,
+      "lastRechargeDate": "2026-01-03"
+    },
+    {
+      "id": "78",
+      "phoneNumber": "9884010078",
+      "name": "Subscriber 78",
+      "plan": "Basic-Voice",
+      "status": "Pending",
+      "dataBalanceGB": 28.85,
+      "lastRechargeDate": "2026-01-08"
+    },
+    {
+      "id": "79",
+      "phoneNumber": "9884010079",
+      "name": "Subscriber 79",
+      "plan": "Unlimited-Pro",
+      "status": "Expired",
+      "dataBalanceGB": 45.35,
+      "lastRechargeDate": "2026-01-11"
+    },
+    {
+      "id": "80",
+      "phoneNumber": "9884010080",
+      "name": "Subscriber 80",
+      "plan": "Data-Max-5G",
+      "status": "Pending",
+      "dataBalanceGB": 13.22,
+      "lastRechargeDate": "2026-01-03"
+    },
+    {
+      "id": "81",
+      "phoneNumber": "9884010081",
+      "name": "Subscriber 81",
+      "plan": "Family-Share",
+      "status": "Expired",
+      "dataBalanceGB": 3.68,
+      "lastRechargeDate": "2026-01-10"
+    },
+    {
+      "id": "82",
+      "phoneNumber": "9884010082",
+      "name": "Subscriber 82",
+      "plan": "Data-Max-5G",
+      "status": "Active",
+      "dataBalanceGB": 49.71,
+      "lastRechargeDate": "2026-01-02"
+    },
+    {
+      "id": "83",
+      "phoneNumber": "9884010083",
+      "name": "Subscriber 83",
+      "plan": "Unlimited-Pro",
+      "status": "Pending",
+      "dataBalanceGB": 42.5,
+      "lastRechargeDate": "2026-01-02"
+    },
+    {
+      "id": "84",
+      "phoneNumber": "9884010084",
+      "name": "Subscriber 84",
+      "plan": "Family-Share",
+      "status": "Pending",
+      "dataBalanceGB": 33.96,
+      "lastRechargeDate": "2026-01-07"
+    },
+    {
+      "id": "85",
+      "phoneNumber": "9884010085",
+      "name": "Subscriber 85",
+      "plan": "Data-Max-5G",
+      "status": "Pending",
+      "dataBalanceGB": 31.42,
+      "lastRechargeDate": "2026-01-04"
+    },
+    {
+      "id": "86",
+      "phoneNumber": "9884010086",
+      "name": "Subscriber 86",
+      "plan": "Basic-Voice",
+      "status": "Pending",
+      "dataBalanceGB": 32.46,
+      "lastRechargeDate": "2026-01-10"
+    },
+    {
+      "id": "87",
+      "phoneNumber": "9884010087",
+      "name": "Subscriber 87",
+      "plan": "Data-Max-5G",
+      "status": "Suspended",
+      "dataBalanceGB": 33.38,
+      "lastRechargeDate": "2026-01-11"
+    },
+    {
+      "id": "88",
+      "phoneNumber": "9884010088",
+      "name": "Subscriber 88",
+      "plan": "Data-Max-5G",
+      "status": "Pending",
+      "dataBalanceGB": 38.29,
+      "lastRechargeDate": "2025-12-31"
+    },
+    {
+      "id": "89",
+      "phoneNumber": "9884010089",
+      "name": "Subscriber 89",
+      "plan": "Unlimited-Pro",
+      "status": "Suspended",
+      "dataBalanceGB": 13.06,
+      "lastRechargeDate": "2026-01-11"
+    },
+    {
+      "id": "90",
+      "phoneNumber": "9884010090",
+      "name": "Subscriber 90",
+      "plan": "Data-Max-5G",
+      "status": "Active",
+      "dataBalanceGB": 37.56,
+      "lastRechargeDate": "2026-01-08"
+    },
+    {
+      "id": "91",
+      "phoneNumber": "9884010091",
+      "name": "Subscriber 91",
+      "plan": "Data-Max-5G",
+      "status": "Suspended",
+      "dataBalanceGB": 41.09,
+      "lastRechargeDate": "2026-01-04"
+    },
+    {
+      "id": "92",
+      "phoneNumber": "9884010092",
+      "name": "Subscriber 92",
+      "plan": "Data-Max-5G",
+      "status": "Active",
+      "dataBalanceGB": 16.4,
+      "lastRechargeDate": "2026-01-12"
+    },
+    {
+      "id": "93",
+      "phoneNumber": "9884010093",
+      "name": "Subscriber 93",
+      "plan": "Unlimited-Pro",
+      "status": "Pending",
+      "dataBalanceGB": 36.66,
+      "lastRechargeDate": "2026-01-03"
+    },
+    {
+      "id": "94",
+      "phoneNumber": "9884010094",
+      "name": "Subscriber 94",
+      "plan": "Basic-Voice",
+      "status": "Active",
+      "dataBalanceGB": 45.44,
+      "lastRechargeDate": "2026-01-05"
+    },
+    {
+      "id": "95",
+      "phoneNumber": "9884010095",
+      "name": "Subscriber 95",
+      "plan": "Family-Share",
+      "status": "Suspended",
+      "dataBalanceGB": 29.44,
+      "lastRechargeDate": "2026-01-05"
+    },
+    {
+      "id": "96",
+      "phoneNumber": "9884010096",
+      "name": "Subscriber 96",
+      "plan": "Unlimited-Pro",
+      "status": "Suspended",
+      "dataBalanceGB": 6.69,
+      "lastRechargeDate": "2026-01-05"
+    },
+    {
+      "id": "97",
+      "phoneNumber": "9884010097",
+      "name": "Subscriber 97",
+      "plan": "Family-Share",
+      "status": "Suspended",
+      "dataBalanceGB": 31.75,
+      "lastRechargeDate": "2026-01-05"
+    },
+    {
+      "id": "98",
+      "phoneNumber": "9884010098",
+      "name": "Subscriber 98",
+      "plan": "Data-Max-5G",
+      "status": "Active",
+      "dataBalanceGB": 24.27,
+      "lastRechargeDate": "2026-01-07"
+    },
+    {
+      "id": "99",
+      "phoneNumber": "9884010099",
+      "name": "Subscriber 99",
+      "plan": "Basic-Voice",
+      "status": "Pending",
+      "dataBalanceGB": 47.41,
+      "lastRechargeDate": "2026-01-02"
+    },
+    {
+      "id": "100",
+      "phoneNumber": "9884010100",
+      "name": "Subscriber 100",
+      "plan": "Family-Share",
+      "status": "Expired",
+      "dataBalanceGB": 28.67,
+      "lastRechargeDate": "2026-01-05"
+    },
+    {
+      "id": "101",
+      "phoneNumber": "9442410275",
+      "name": "Pranusshraj M G",
+      "plan": "Unlimited-5G",
+      "dataBalanceGB": 100,
+      "status": "Active"
+    },
+    {
+      "id": "2",
+      "phoneNumber": "9698831201",
+      "name": "Muthukumar R",
+      "plan": "Unlimited-5G",
+      "dataBalanceGB": 75.5,
+      "status": "Active"
+    }
+  ],
+  "transactions": []
+}

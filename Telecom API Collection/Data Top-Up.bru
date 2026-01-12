@@ -1,0 +1,19 @@
+meta {
+  name: Data Top-Up
+  type: http
+  seq: 4
+}
+
+patch {
+  url: http://localhost:3000/subscribers/:id
+  body: none
+  auth: inherit
+}
+
+params:path {
+  id: 
+}
+
+settings {
+  encodeUrl: true
+}
