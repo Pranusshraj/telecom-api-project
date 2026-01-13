@@ -45,6 +45,29 @@ app.get('/admin/stats', (req, res) => {
 });
 // ** Include Rate limiting - The max no. of requests that a user can rise in a session
 
+app.use((req, res, next) => {
+    const authHeader = req.header('Authorization');
+
+    // 1. Check if the header exists and starts with 'Basic '
+    if (!authHeader || !authHeader.startsWith('Basic ')) {
+        // 401 Unauthorized is the standard response for missing credentials
+        return res.status(401).json({ error: "Authentication Required" });
+    }
+
+    // 2. Extract the Base64 string and decode it
+    const base64Credentials = authHeader.split(' ')[1];
+    const decoded = Buffer.from(base64Credentials, 'base64').toString('utf-8');
+    const [username, password] = decoded.split(':');
+
+    // 3. Validate the credentials
+    if (username === 'telecom_admin' && password === 'p@ssword123') {
+        next(); // Success! Move to the API routes
+    } else {
+        res.status(403).json({ error: "Forbidden: Invalid credentials" });
+    }
+});
+// Basic Auth using a username and password
+
 // --- 1. GET ALL (With Optional Filtering) ---
 app.get('/subscribers', (req, res) => {
     const db = getDb();
