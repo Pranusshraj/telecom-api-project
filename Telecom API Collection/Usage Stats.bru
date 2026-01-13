@@ -10,6 +10,11 @@ get {
   auth: inherit
 }
 
+headers {
+  x-api-key: {{API_KEY}}
+}
+
 settings {
   encodeUrl: true
+  timeout: 0
 }

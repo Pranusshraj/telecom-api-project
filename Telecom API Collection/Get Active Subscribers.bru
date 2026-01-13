@@ -7,13 +7,18 @@ meta {
 get {
   url: http://localhost:3000/subscribers?status=Active
   body: none
-  auth: inherit
+  auth: basic
 }
 
 params:query {
   status: Active
 }
 
+headers {
+  x-api-key: {{API_KEY}}
+}
+
 settings {
   encodeUrl: true
+  timeout: 0
 }
