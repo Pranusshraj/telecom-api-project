@@ -22,16 +22,31 @@ body:json {
 }
 
 script:post-response {
-  bru.setEnvVar("my_token", res.getBody().token);
-  // This is a dynamic variable
+  const token = res.getBody()?.token || "";
+  
+  // Set the environment variable
+  bru.setEnvVar("my_token", token);
 }
 
 tests {
-  test("Login should return a valid JWT token string", function() {
-    const data = res.getBody();
-    expect(res.getStatus()).to.equal(200);
-    expect(data.token).to.be.a('string');
+  test("Login: Status, Schema, and Token Value", function() {
+      const data = res.getBody();
+  
+      // 1. Status Check
+      expect(res.getStatus()).to.equal(200);
+  
+      // 2. Schema Check
+      expect(data).to.have.property('token');
+      expect(data).to.have.property('message');
+  
+      // 3. Value Check
+      expect(data.message).to.equal("Login Successful");
+      expect(data.token).to.be.a('string');
+      expect(data.token.length).to.be.above(50); // Ensures it's not an empty string
   });
+  
+  
+  // Test to verify - status, schema, values
 }
 
 settings {
