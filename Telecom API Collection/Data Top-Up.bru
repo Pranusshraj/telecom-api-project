@@ -6,14 +6,30 @@ meta {
 
 patch {
   url: http://localhost:3000/subscribers/:id
-  body: none
-  auth: inherit
+  body: json
+  auth: basic
 }
 
 params:path {
-  id: 
+  id: 102
+}
+
+headers {
+  x-api-key: {{API_KEY}}
+}
+
+auth:basic {
+  username: telecom_admin
+  password: p@ssword123
+}
+
+body:json {
+  {
+    "dataBalanceGB": 100.5
+  }
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }

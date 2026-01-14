@@ -7,13 +7,23 @@ meta {
 delete {
   url: http://localhost:3000/subscribers/:id
   body: none
-  auth: inherit
+  auth: basic
 }
 
 params:path {
-  id: 
+  id: 2
+}
+
+headers {
+  x-api-key: {{API_KEY}}
+}
+
+auth:basic {
+  username: telecom_admin
+  password: p@ssword123
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }

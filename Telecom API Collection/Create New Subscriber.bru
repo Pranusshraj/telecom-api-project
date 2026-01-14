@@ -6,10 +6,32 @@ meta {
 
 post {
   url: http://localhost:3000/subscribers
-  body: none
-  auth: inherit
+  body: json
+  auth: basic
+}
+
+headers {
+  x-api-key: {{API_KEY}}
+}
+
+auth:basic {
+  username: telecom_admin
+  password: p@ssword123
+}
+
+body:json {
+  {
+      "id": "102",
+      "phoneNumber": "9884010001",
+      "name": "Madhesh Nigg",
+      "plan": "Data-Max-5G",
+      "status": "Active",
+      "dataBalanceGB": 23.68,
+      "lastRechargeDate": "2026-01-09"
+    }
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
