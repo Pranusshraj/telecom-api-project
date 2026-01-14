@@ -7,7 +7,7 @@ meta {
 patch {
   url: http://localhost:3000/subscribers/:id
   body: json
-  auth: basic
+  auth: bearer
 }
 
 params:path {
@@ -18,14 +18,13 @@ headers {
   x-api-key: {{API_KEY}}
 }
 
-auth:basic {
-  username: telecom_admin
-  password: p@ssword123
+auth:bearer {
+  token: {{my_token}}
 }
 
 body:json {
   {
-    "dataBalanceGB": 100.5
+    "dataBalanceGB": 110.5
   }
 }
 

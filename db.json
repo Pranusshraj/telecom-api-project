@@ -1,15 +1,6 @@
 {
   "subscribers": [
     {
-      "id": "3",
-      "phoneNumber": "9884010003",
-      "name": "Subscriber 3",
-      "plan": "Data-Max-5G",
-      "status": "Pending",
-      "dataBalanceGB": 22.49,
-      "lastRechargeDate": "2026-01-04"
-    },
-    {
       "id": "4",
       "phoneNumber": "9884010004",
       "name": "Subscriber 4",
@@ -895,12 +886,20 @@
       "phoneNumber": "9884010001",
       "name": "Madhesh Nigg",
       "plan": "Data-Max-5G",
-      "dataBalanceGB": 100.5,
+      "dataBalanceGB": 110.5,
+      "status": "Active"
+    },
+    {
+      "id": "1",
+      "phoneNumber": "9696969696",
+      "name": "Rahul",
+      "plan": "Basic-Voice",
+      "dataBalanceGB": 19.14,
       "status": "Active"
     }
   ],
   "transactions": [],
   "usage": {
-    "telecom-secret-2026": 35
+    "telecom-secret-2026": 59
   }
 }

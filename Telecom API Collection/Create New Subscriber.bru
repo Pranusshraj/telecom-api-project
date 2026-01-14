@@ -7,28 +7,27 @@ meta {
 post {
   url: http://localhost:3000/subscribers
   body: json
-  auth: basic
+  auth: bearer
 }
 
 headers {
   x-api-key: {{API_KEY}}
 }
 
-auth:basic {
-  username: telecom_admin
-  password: p@ssword123
+auth:bearer {
+  token: {{my_token}}
 }
 
 body:json {
   {
-      "id": "102",
-      "phoneNumber": "9884010001",
-      "name": "Madhesh Nigg",
-      "plan": "Data-Max-5G",
+      "id": "1",
+      "phoneNumber": "9696969696",
+      "name": "Rahul",
+      "plan": "Basic-Voice",
       "status": "Active",
-      "dataBalanceGB": 23.68,
-      "lastRechargeDate": "2026-01-09"
-    }
+      "dataBalanceGB": 19.14,
+      "lastRechargeDate": "2026-01-07"
+  }
 }
 
 settings {

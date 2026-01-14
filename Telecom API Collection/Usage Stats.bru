@@ -7,16 +7,15 @@ meta {
 get {
   url: http://localhost:3000/admin/stats
   body: none
-  auth: basic
+  auth: bearer
 }
 
 headers {
   x-api-key: {{API_KEY}}
 }
 
-auth:basic {
-  username: telecom_admin
-  password: p@assword123
+auth:bearer {
+  token: {{my_token}}
 }
 
 settings {

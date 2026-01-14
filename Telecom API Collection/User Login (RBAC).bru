@@ -1,0 +1,31 @@
+meta {
+  name: User Login (RBAC)
+  type: http
+  seq: 7
+}
+
+post {
+  url: http://localhost:3000/login
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-api-key: {{API_KEY}}
+}
+
+body:json {
+  {
+    "username": "telecom_admin", 
+    "password": "p@ssword123"
+  }
+}
+
+script:post-response {
+  bru.setEnvVar("my_token", res.getBody().token);
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

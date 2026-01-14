@@ -7,20 +7,19 @@ meta {
 get {
   url: http://localhost:3000/subscribers/:id
   body: none
-  auth: basic
+  auth: bearer
 }
 
 params:path {
-  id: 2
+  id: 101
 }
 
 headers {
   x-api-key: {{API_KEY}}
 }
 
-auth:basic {
-  username: telecom_admin
-  password: p@ssword123
+auth:bearer {
+  token: {{my_token}}
 }
 
 settings {
