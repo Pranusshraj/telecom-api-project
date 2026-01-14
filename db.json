@@ -1,15 +1,6 @@
 {
   "subscribers": [
     {
-      "id": "4",
-      "phoneNumber": "9884010004",
-      "name": "Subscriber 4",
-      "plan": "Basic-Voice",
-      "status": "Active",
-      "dataBalanceGB": 19.14,
-      "lastRechargeDate": "2026-01-07"
-    },
-    {
       "id": "5",
       "phoneNumber": "9884010005",
       "name": "Subscriber 5",
@@ -896,10 +887,18 @@
       "plan": "Basic-Voice",
       "dataBalanceGB": 19.14,
       "status": "Active"
+    },
+    {
+      "id": "3",
+      "phoneNumber": "9823647920",
+      "name": "Ajay R",
+      "plan": "Unlimited",
+      "dataBalanceGB": 19.14,
+      "status": "Active"
     }
   ],
   "transactions": [],
   "usage": {
-    "telecom-secret-2026": 59
+    "telecom-secret-2026": 97
   }
 }

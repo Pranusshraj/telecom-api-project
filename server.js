@@ -108,6 +108,7 @@ app.get('/subscribers', authorize([ROLES.ADMIN, ROLES.INTERN]), (req, res) => {
     }
     res.json(results);
 });
+// A test has been written to validate the errors using the excpet command that will validate the error code with the error message.
 
 // C. GET ONE SUBSCRIBER (Admin & Intern)
 app.get('/subscribers/:id', authorize([ROLES.ADMIN, ROLES.INTERN]), (req, res) => {
@@ -123,7 +124,8 @@ app.post('/subscribers', authorize([ROLES.ADMIN]), (req, res) => {
     const { id, phoneNumber, name, plan, dataBalanceGB } = req.body;
 
     if (!id || !phoneNumber || !name) {
-        return res.status(400).json({ error: "Missing required fields." });
+        return res.status(400).json({ error: "Missing Mandatory fields." });
+        //Fields that the server requires in the request body to create or update a resource. If these are missing, the server should return a 400 Bad Request.
     }
     if (db.subscribers.find(s => s.id === id)) {
         return res.status(409).json({ error: "ID already exists." });

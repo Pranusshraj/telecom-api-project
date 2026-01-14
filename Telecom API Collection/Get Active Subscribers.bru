@@ -1,11 +1,11 @@
 meta {
   name: Get Active Subscribers
   type: http
-  seq: 2
+  seq: 4
 }
 
 get {
-  url: http://localhost:3000/subscribers?status=Active
+  url: {{base_url}}/subscribers?status=Active
   body: none
   auth: bearer
 }
@@ -23,11 +23,11 @@ auth:bearer {
 }
 
 tests {
-  test("Should return 401 and specific error message when API key is missing", function() {
-    expect(res.getStatus()).to.equal(401);
-    
+  test("All returned subscribers should have Active status", function() {
     const data = res.getBody();
-    expect(data.error).to.equal("Unauthorized: Invalid or Missing x-api-key");
+    data.forEach(sub => {
+      expect(sub.status).to.equal('Active');
+    });
   });
 }
 

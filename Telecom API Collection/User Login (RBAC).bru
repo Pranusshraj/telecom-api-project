@@ -1,7 +1,7 @@
 meta {
   name: User Login (RBAC)
   type: http
-  seq: 7
+  seq: 2
 }
 
 post {
@@ -23,6 +23,15 @@ body:json {
 
 script:post-response {
   bru.setEnvVar("my_token", res.getBody().token);
+  // This is a dynamic variable
+}
+
+tests {
+  test("Login should return a valid JWT token string", function() {
+    const data = res.getBody();
+    expect(res.getStatus()).to.equal(200);
+    expect(data.token).to.be.a('string');
+  });
 }
 
 settings {

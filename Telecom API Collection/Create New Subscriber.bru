@@ -1,7 +1,7 @@
 meta {
   name: Create New Subscriber
   type: http
-  seq: 1
+  seq: 3
 }
 
 post {
@@ -20,14 +20,25 @@ auth:bearer {
 
 body:json {
   {
-      "id": "1",
-      "phoneNumber": "9696969696",
-      "name": "Rahul",
-      "plan": "Basic-Voice",
+      "id": "103",
+      "phoneNumber": "9823647920",
+      "name": "Thaya",
+      "plan": "Unlimited",
       "status": "Active",
       "dataBalanceGB": 19.14,
       "lastRechargeDate": "2026-01-07"
   }
+}
+
+script:pre-request {
+  bru.setVar("new_id", "103")
+}
+
+tests {
+  test("Subscriber creation successful and returns the new object", function() {
+    expect(res.getStatus()).to.equal(201);
+    expect(res.getBody().id).to.equal(bru.getVar("new_id"));
+  });
 }
 
 settings {

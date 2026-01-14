@@ -1,7 +1,7 @@
 meta {
   name: Get Subscriber Profile
   type: http
-  seq: 3
+  seq: 5
 }
 
 get {
@@ -11,7 +11,7 @@ get {
 }
 
 params:path {
-  id: 101
+  id: 103
 }
 
 headers {
@@ -20,6 +20,14 @@ headers {
 
 auth:bearer {
   token: {{my_token}}
+}
+
+tests {
+  test("Profile should contain a numeric data balance", function() {
+    expect(res.getStatus()).to.equal(200);
+    expect(res.getBody().dataBalanceGB).to.be.a('number');
+  });
+  //Verify specific data types (ensuring no "Compatibility Issues")
 }
 
 settings {

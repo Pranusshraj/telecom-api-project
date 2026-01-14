@@ -1,7 +1,7 @@
 meta {
   name: Data Top-Up
   type: http
-  seq: 4
+  seq: 6
 }
 
 patch {
@@ -11,11 +11,11 @@ patch {
 }
 
 params:path {
-  id: 102
+  id: 103
 }
 
 headers {
-  x-api-key: {{API_KEY}}
+  ~x-api-key: {{API_KEY}}
 }
 
 auth:bearer {
@@ -26,6 +26,14 @@ body:json {
   {
     "dataBalanceGB": 110.5
   }
+}
+
+tests {
+  test("Should fail with 401 when x-api-key is missing", function() {
+    expect(res.getStatus()).to.equal(401);
+    expect(res.getBody().error).to.include("Unauthorized");
+  });
+  // This is a negative test, we have to disable the api-key for this test to be returning a positive result.
 }
 
 settings {

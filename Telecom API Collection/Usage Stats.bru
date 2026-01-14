@@ -1,7 +1,7 @@
 meta {
   name: Usage Stats
   type: http
-  seq: 6
+  seq: 8
 }
 
 get {
@@ -16,6 +16,17 @@ headers {
 
 auth:bearer {
   token: {{my_token}}
+}
+
+tests {
+  test("Usage Stats: Verify metrics structure", function() {
+    const data = res.getBody();
+    expect(res.getStatus()).to.equal(200);
+    
+    const currentUsage = data.metrics[bru.getEnvVar("API_KEY")];
+    expect(currentUsage).to.be.a('number');
+    expect(currentUsage).to.be.at.least(1);
+  });
 }
 
 settings {
