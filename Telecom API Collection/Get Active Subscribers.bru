@@ -22,6 +22,15 @@ auth:bearer {
   token: {{my_token}}
 }
 
+tests {
+  test("Should return 401 and specific error message when API key is missing", function() {
+    expect(res.getStatus()).to.equal(401);
+    
+    const data = res.getBody();
+    expect(data.error).to.equal("Unauthorized: Invalid or Missing x-api-key");
+  });
+}
+
 settings {
   encodeUrl: true
   timeout: 0
