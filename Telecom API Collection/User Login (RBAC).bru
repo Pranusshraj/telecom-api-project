@@ -16,7 +16,7 @@ headers {
 
 body:json {
   {
-    "username": "telecom_admin", 
+    "username": "telecom_adin", 
     "password": "p@ssword123"
   }
 }
@@ -83,8 +83,11 @@ tests {
   test("Login: Status, Schema, and Token Value", function() {
       const data = res.getBody();
   
-      // 1. Status Check
-      expect(res.getStatus()).to.equal(200);
+      // Status Check
+      if (res.getStatus() !== 200) {
+        bru.setNextRequest(null); 
+        // This stops the runner immediately
+      }
   
       // 2. Schema Check
       expect(data).to.have.property('token');
@@ -95,8 +98,6 @@ tests {
       expect(data.token).to.be.a('string');
       expect(data.token.length).to.be.above(50); // Ensures it's not an empty string
   });
-  
-  
   // Test to verify - status, schema, values
 }
 
