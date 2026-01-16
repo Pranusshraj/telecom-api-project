@@ -25,19 +25,37 @@ body:json {
       "name": "Thaya",
       "plan": "Unlimited",
       "status": "Active",
-      "dataBalanceGB": "19.14",
+      "dataBalanceGB": 19.14,
       "lastRechargeDate": "2026-01-07"
   }
 }
 
-script:pre-request {
-  bru.setVar("new_id", "103")
+script:post-response {
+  // 1. Get the body that was just sent in the request
+  const sentData = req.getBody();
+  
+  // 2. Automatically store the fields into variables
+  if (sentData) {
+      bru.setVar("testName", sentData.name);
+      bru.setVar("testPlan", sentData.plan);
+      
+      console.log(`Auto-stored variables: Name=${sentData.name}, Plan=${sentData.plan}`);
+  }
 }
 
 tests {
-  test("Subscriber creation successful and returns the new object", function() {
-    expect(res.getStatus()).to.equal(201);
-    expect(res.getBody().id).to.equal(bru.getVar("new_id"));
+  // Comparing Response vs. Request (Mirroring)
+  
+  
+  test("Verify server mirrored the manual input", function() {
+      const responseData = res.getBody();
+      
+      // Retrieve the variables the Post-response script just saved
+      const savedName = bru.getVar("testName");
+      const savedPlan = bru.getVar("testPlan");
+  
+      expect(responseData.name).to.equal(savedName);
+      expect(responseData.plan).to.equal(savedPlan);
   });
 }
 
