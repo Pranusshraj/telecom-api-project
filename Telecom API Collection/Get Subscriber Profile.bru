@@ -11,7 +11,7 @@ get {
 }
 
 params:path {
-  id: 103
+  id: 104
 }
 
 headers {
@@ -23,11 +23,20 @@ auth:bearer {
 }
 
 tests {
-  test("Profile should contain a numeric data balance", function() {
-    expect(res.getStatus()).to.equal(200);
-    expect(res.getBody().dataBalanceGB).to.be.a('number');
+  test("Subscriber Schema Validation", function() {
+      const data = res.getBody();
+      const schema = JSON.parse(bru.getVar("subscriberSchema"));
+      
+      // Call our global helper function
+      const validator = bru.getVar('validateSchema');
+      const result = validator(data, schema);
+  
+      if (!result.isValid) {
+          console.error("Validation failed:", result.errors);
+      }
+  
+      expect(result.isValid, `Schema errors: ${result.errors.join(', ')}`).to.be.true;
   });
-  //Verify specific data types (ensuring no "Compatibility Issues")
 }
 
 settings {

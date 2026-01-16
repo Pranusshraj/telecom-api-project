@@ -1,0 +1,32 @@
+script:pre-request {
+  bru.setVar('validateSchema', function(data, schema) {
+      const errors = [];
+      
+      // Check Required Fields
+      if (schema.required) {
+          schema.required.forEach(field => {
+              if (data[field] === undefined) {
+                  errors.push(`Missing mandatory field: ${field}`);
+              }
+          });
+      }
+  
+      // Check Data Types
+      if (schema.properties) {
+          for (const [key, rules] of Object.entries(schema.properties)) {
+              if (data[key] !== undefined) {
+                  const actualType = typeof data[key];
+                  const expectedType = rules.type;
+                  if (actualType !== expectedType) {
+                      errors.push(`Field '${key}' should be ${expectedType}, but got ${actualType}`);
+                  }
+              }
+          }
+      }
+  
+      return {
+          isValid: errors.length === 0,
+          errors: errors
+      };
+  });
+}
