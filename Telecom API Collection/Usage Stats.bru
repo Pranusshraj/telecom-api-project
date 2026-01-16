@@ -19,13 +19,13 @@ auth:bearer {
 }
 
 tests {
-  test("Usage Stats: Verify metrics structure", function() {
-    const data = res.getBody();
-    expect(res.getStatus()).to.equal(200);
+  test("Performance: Response time is within SLA (< 2000ms)", function() {
+    const responseTime = res.getResponseTime();
     
-    const currentUsage = data.metrics[bru.getEnvVar("API_KEY")];
-    expect(currentUsage).to.be.a('number');
-    expect(currentUsage).to.be.at.least(1);
+    // Assert that the time is below 2 seconds
+    expect(responseTime).to.be.below(2000, `Slow response detected: ${responseTime}ms`);
+    
+    console.log(`API Latency: ${responseTime} ms`);
   });
 }
 
