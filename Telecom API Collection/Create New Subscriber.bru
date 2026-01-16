@@ -30,6 +30,23 @@ body:json {
   }
 }
 
+script:pre-request {
+  // 1. Generate a unique Subscriber ID
+  const randomId = "SUB-" + Math.floor(Math.random() * 100000);
+  
+  // 2. Generate a random phone number (format: 555-XXXX)
+  const randomPhone = "555-" + Math.floor(1000 + Math.random() * 9000);
+  
+  // 3. Select a random plan from an array
+  const plans = ["Basic", "Unlimited", "Unlimited-5G"];
+  const randomPlan = plans[Math.floor(Math.random() * plans.length)];
+  
+  // Save these to variables to use in the Body or URL
+  bru.setVar("dynId", randomId);
+  bru.setVar("dynPhone", randomPhone);
+  bru.setVar("dynPlan", randomPlan);
+}
+
 script:post-response {
   // 1. Get the body that was just sent in the request
   const sentData = req.getBody();

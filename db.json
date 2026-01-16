@@ -911,10 +911,18 @@
       "plan": "Unlimited",
       "dataBalanceGB": 19.14,
       "status": "Active"
+    },
+    {
+      "id": "SUB-99043",
+      "phoneNumber": "555-4661",
+      "name": "Dynamic Test User",
+      "plan": "Unlimited",
+      "dataBalanceGB": 10,
+      "status": "Active"
     }
   ],
   "transactions": [],
   "usage": {
-    "telecom-secret-2026": 86
+    "telecom-secret-2026": 87
   }
 }
