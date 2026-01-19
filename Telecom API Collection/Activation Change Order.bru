@@ -1,0 +1,43 @@
+meta {
+  name: Activation Change Order
+  type: http
+  seq: 9
+}
+
+patch {
+  url: http://localhost:3000/subscribers/:id
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 5
+}
+
+headers {
+  x-api-key: {{API_KEY}}
+}
+
+auth:bearer {
+  token: {{my_token}}
+}
+
+body:json {
+  {
+    "status": "Active",
+    "lastRechargeDate": "{{currentDate}}"
+  }
+}
+
+script:pre-request {
+  const date = new Date();
+  const formattedDate = date.toISOString().split('T')[0];
+  
+  // Set the variable so it can be used in the JSON body
+  bru.setVar("currentDate", formattedDate);
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

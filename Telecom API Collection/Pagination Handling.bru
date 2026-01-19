@@ -1,19 +1,29 @@
 meta {
-  name: Pagination Handling 
+  name: Pagination Handling
   type: http
   seq: 8
 }
 
 get {
-  url: {{base_url}}/subscribers?status=Active
+  url: {{base_url}}/subscribers?limit=2&page=3
   body: none
-  auth: inherit
+  auth: bearer
 }
 
 params:query {
-  status: Active
+  limit: 2
+  page: 3
+}
+
+headers {
+  x-api-key: {{API_KEY}}
+}
+
+auth:bearer {
+  token: {{my_token}}
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }

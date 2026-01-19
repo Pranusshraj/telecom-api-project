@@ -184,6 +184,59 @@ app.delete('/subscribers/:id', authorize([ROLES.ADMIN]), (req, res) => {
     res.status(204).send();
 });
 
+// Payments API
+app.post('/payments', (req, res) => {
+    const { subscriberId, amount, paymentMethod, category } = req.body;
+
+    // 1. Basic Validation
+    if (!id || !amount || amount <= 0) {
+        return res.status(400).json({ error: "Invalid payment details. Amount must be positive." });
+    }
+
+    try {
+        // 2. Read the database
+        const data = JSON.parse(fs.readFileSync('./db.json', 'utf8'));
+        
+        // 3. Find the subscriber
+        const subIndex = data.subscribers.findIndex(s => s.id === subscriberId);
+        if (subIndex === -1) {
+            return res.status(404).json({ error: "Subscriber not found" });
+        }
+
+        // 4. Create Transaction Record
+        const transaction = {
+            transactionId: `TXN-${Date.now()}-${Math.floor(Math.random() * 1000)}`,
+            subscriberId,
+            amount,
+            status: "Success",
+            category: category || "TopUp",
+            date: new Date().toISOString()
+        };
+
+        // 5. Update Subscriber Balance (Business Logic)
+        // For example: $1 adds 1GB of data
+        const dataAwarded = amount / 5; // $5 per 1GB
+        data.subscribers[subIndex].dataBalanceGB += dataAwarded;
+
+        // 6. Save to db.json
+        if (!data.transactions) data.transactions = [];
+        data.transactions.push(transaction);
+        
+        fs.writeFileSync('./db.json', JSON.stringify(data, null, 2));
+
+        // 7. Return Success
+        res.status(201).json({
+            message: "Payment Processed",
+            transactionId: transaction.transactionId,
+            newBalanceGB: data.subscribers[subIndex].dataBalanceGB,
+            status: "Success"
+        });
+
+    } catch (error) {
+        res.status(500).json({ error: "Internal Server Error" });
+    }
+});
+
 app.listen(PORT, () => console.log(`🚀 Telecom API running at http://localhost:${PORT}`));
 
 /* Basic Auth using a username and password 

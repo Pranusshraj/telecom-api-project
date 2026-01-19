@@ -20,14 +20,13 @@ auth:bearer {
 
 body:json {
   {
-      "id": "104",
-      "phoneNumber": "9823647920",
-      "name": "Thaya",
-      "plan": "Unlimited",
-      "status": "Active",
-      "dataBalanceGB": 19.14,
-      "lastRechargeDate": "2026-01-07"
+    "id": "{{dynId}}",
+    "phoneNumber": "{{dynPhone}}",
+    "name": "Dynamic Test User",
+    "plan": "{{dynPlan}}",
+    "dataBalanceGB": 10
   }
+  // Using a dynamic varibale to simulate multiple user.
 }
 
 script:pre-request {

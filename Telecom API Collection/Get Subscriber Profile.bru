@@ -11,7 +11,7 @@ get {
 }
 
 params:path {
-  id: 104
+  id: 5
 }
 
 headers {
@@ -20,6 +20,16 @@ headers {
 
 auth:bearer {
   token: {{my_token}}
+}
+
+script:post-response {
+  const data = res.getBody();
+  console.info(`Plan captured from POS: ${data.plan}`);
+  
+  // Log a warning if performance is dipping
+  if (res.getResponseTime() > 1000) {
+      console.warn("⚠️ High latency detected on this transaction");
+  }
 }
 
 tests {

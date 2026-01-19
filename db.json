@@ -5,9 +5,9 @@
       "phoneNumber": "9884010005",
       "name": "Subscriber 5",
       "plan": "Unlimited-Pro",
-      "status": "Suspended",
+      "status": "Active",
       "dataBalanceGB": 6.65,
-      "lastRechargeDate": "2026-01-08"
+      "lastRechargeDate": "2026-01-19"
     },
     {
       "id": "6",
@@ -919,10 +919,18 @@
       "plan": "Unlimited",
       "dataBalanceGB": 10,
       "status": "Active"
+    },
+    {
+      "id": "921",
+      "phoneNumber": "9884010005",
+      "name": "Subscriber 5",
+      "plan": "Unlimited-Pro",
+      "dataBalanceGB": 0,
+      "status": "Active"
     }
   ],
   "transactions": [],
   "usage": {
-    "telecom-secret-2026": 97
+    "telecom-secret-2026": 18
   }
 }

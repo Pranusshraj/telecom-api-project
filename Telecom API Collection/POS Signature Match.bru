@@ -1,0 +1,59 @@
+meta {
+  name: POS Signature Match
+  type: http
+  seq: 10
+}
+
+post {
+  url: http://localhost:3000/subscribers
+  body: json
+  auth: bearer
+}
+
+headers {
+  x-api-key: {{API_KEY}}
+}
+
+auth:bearer {
+  token: {{my_token}}
+}
+
+body:json {
+  {
+      "id": "921",
+      "phoneNumber": "9884010005",
+      "name": "Subscriber 5",
+      "plan": "Unlimited-Pro",
+      "status": "Active"
+  }
+}
+
+script:pre-request {
+  // Data entered by the salesperson at the POS terminal
+  const posInput = {
+      "id": "921",
+      "phoneNumber": "9884010005",
+      "name": "Subscriber 5",
+      "plan": "Unlimited-Pro",
+      "status": "Active"
+  };
+  
+  // Store this as our "Expected" benchmark
+  bru.setVar("expectedPOS", posInput);
+}
+
+script:post-response {
+  test("Full POS Signature Match", function() {
+      const captured = res.getBody();
+      const expected = bru.getVar("expectedPOS");
+  
+      // Use deep.include to see if 'captured' contains everything in 'expected'
+      // This allows the server to add extra fields (like timestamps) without failing the test
+      expect(captured).to.deep.include(expected);
+  });
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
