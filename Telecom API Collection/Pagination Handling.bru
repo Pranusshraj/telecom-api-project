@@ -1,0 +1,19 @@
+meta {
+  name: Pagination Handling 
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{base_url}}/subscribers?status=Active
+  body: none
+  auth: inherit
+}
+
+params:query {
+  status: Active
+}
+
+settings {
+  encodeUrl: true
+}

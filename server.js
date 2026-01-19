@@ -99,14 +99,34 @@ app.get('/admin/stats', authorize([ROLES.ADMIN, ROLES.INTERN]), (req, res) => {
     res.json({ service: "Telecom Gateway", metrics: db.usage });
 });
 
-// B. GET ALL SUBSCRIBERS (Admin & Intern)
+// B. GET ALL SUBSCRIBERS (Admin & Intern) - Pagination Added
 app.get('/subscribers', authorize([ROLES.ADMIN, ROLES.INTERN]), (req, res) => {
     const db = getDb();
     let results = db.subscribers;
+
+    // 1. Existing Filtering Logic
     if (req.query.status) {
         results = results.filter(s => s.status === req.query.status);
     }
-    res.json(results);
+
+    // 2. Extract Pagination Parameters
+    const page = parseInt(req.query.page) || 1;
+    const limit = parseInt(req.query.limit) || 10;
+
+    // 3. Calculate Slicing Indexes
+    const startIndex = (page - 1) * limit;
+    const endIndex = page * limit;
+
+    // 4. Slice the filtered results
+    const paginatedResults = results.slice(startIndex, endIndex);
+
+    // 5. Return paginated data + metadata
+    res.json({
+        totalItems: results.length, // Total after filtering, before slicing
+        currentPage: page,
+        totalPages: Math.ceil(results.length / limit),
+        data: paginatedResults
+    });
 });
 // A test has been written to validate the errors using the excpet command that will validate the error code with the error message.
 
