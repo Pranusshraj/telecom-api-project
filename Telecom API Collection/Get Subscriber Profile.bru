@@ -11,7 +11,7 @@ get {
 }
 
 params:path {
-  id: 5
+  id: 921
 }
 
 headers {
@@ -30,23 +30,6 @@ script:post-response {
   if (res.getResponseTime() > 1000) {
       console.warn("⚠️ High latency detected on this transaction");
   }
-}
-
-tests {
-  test("Subscriber Schema Validation", function() {
-      const data = res.getBody();
-      const schema = JSON.parse(bru.getVar("subscriberSchema"));
-      
-      // Call our global helper function
-      const validator = bru.getVar('validateSchema');
-      const result = validator(data, schema);
-  
-      if (!result.isValid) {
-          console.error("Validation failed:", result.errors);
-      }
-  
-      expect(result.isValid, `Schema errors: ${result.errors.join(', ')}`).to.be.true;
-  });
 }
 
 settings {

@@ -1,15 +1,6 @@
 {
   "subscribers": [
     {
-      "id": "5",
-      "phoneNumber": "9884010005",
-      "name": "Subscriber 5",
-      "plan": "Unlimited-Pro",
-      "status": "Active",
-      "dataBalanceGB": 6.65,
-      "lastRechargeDate": "2026-01-19"
-    },
-    {
       "id": "6",
       "phoneNumber": "9884010006",
       "name": "Subscriber 6",
@@ -905,18 +896,51 @@
       "status": "Active"
     },
     {
-      "id": "104",
-      "phoneNumber": "9823647920",
-      "name": "Thaya",
-      "plan": "Unlimited",
-      "dataBalanceGB": 19.14,
-      "status": "Active"
-    },
-    {
       "id": "SUB-99043",
       "phoneNumber": "555-4661",
       "name": "Dynamic Test User",
       "plan": "Unlimited",
+      "dataBalanceGB": 10,
+      "status": "Active"
+    },
+    {
+      "id": "SUB-16324",
+      "phoneNumber": "555-9578",
+      "name": "Dynamic Test User",
+      "plan": "Unlimited",
+      "dataBalanceGB": 10,
+      "status": "Active"
+    },
+    {
+      "id": "SUB-8667",
+      "phoneNumber": "555-5552",
+      "name": "Dynamic Test User",
+      "plan": "Basic",
+      "dataBalanceGB": 10,
+      "status": "Active"
+    },
+    {
+      "id": "SUB-1472",
+      "phoneNumber": "555-3338",
+      "name": "Dynamic Test User",
+      "plan": "Unlimited",
+      "dataBalanceGB": 10,
+      "status": "Active",
+      "lastRechargeDate": "2026-01-19"
+    },
+    {
+      "id": "SUB-72771",
+      "phoneNumber": "555-2777",
+      "name": "Dynamic Test User",
+      "plan": "Unlimited-5G",
+      "dataBalanceGB": 10,
+      "status": "Active"
+    },
+    {
+      "id": "SUB-85102",
+      "phoneNumber": "555-5361",
+      "name": "Dynamic Test User",
+      "plan": "Unlimited-5G",
       "dataBalanceGB": 10,
       "status": "Active"
     },
@@ -931,6 +955,6 @@
   ],
   "transactions": [],
   "usage": {
-    "telecom-secret-2026": 18
+    "telecom-secret-2026": 72
   }
 }

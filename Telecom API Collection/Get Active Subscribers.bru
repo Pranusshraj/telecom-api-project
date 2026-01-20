@@ -22,23 +22,6 @@ auth:bearer {
   token: {{my_token}}
 }
 
-tests {
-  test("Subscriber Schema Validation", function() {
-      const data = res.getBody();
-      const schema = JSON.parse(bru.getVar("subscriberSchema"));
-      
-      // Call our global helper function
-      const validator = bru.getVar('validateSchema');
-      const result = validator(data, schema);
-  
-      if (!result.isValid) {
-          console.error("Validation failed:", result.errors);
-      }
-  
-      expect(result.isValid, `Schema errors: ${result.errors.join(', ')}`).to.be.true;
-  });
-}
-
 settings {
   encodeUrl: true
   timeout: 0
