@@ -5,13 +5,14 @@ meta {
 }
 
 get {
-  url: {{base_url}}/subscribers?status=Active
+  url: {{base_url}}/subscribers?status=Active&page=3
   body: none
   auth: bearer
 }
 
 params:query {
   status: Active
+  page: 3
 }
 
 headers {

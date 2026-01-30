@@ -926,7 +926,7 @@
       "plan": "Unlimited",
       "dataBalanceGB": 10,
       "status": "Active",
-      "lastRechargeDate": "2026-01-19"
+      "lastRechargeDate": "2026-01-30"
     },
     {
       "id": "SUB-72771",
@@ -945,16 +945,112 @@
       "status": "Active"
     },
     {
-      "id": "921",
+      "id": "SUB-825",
+      "phoneNumber": "555-8998",
+      "name": "Dynamic Test User",
+      "plan": "Unlimited",
+      "dataBalanceGB": 10,
+      "status": "Active"
+    },
+    {
+      "id": "SUB-16489",
+      "phoneNumber": "555-8032",
+      "name": "Dynamic Test User",
+      "plan": "Unlimited",
+      "dataBalanceGB": 10,
+      "status": "Active"
+    },
+    {
+      "id": "SUB-47295",
+      "phoneNumber": "555-8757",
+      "name": "Dynamic Test User",
+      "plan": "Unlimited",
+      "dataBalanceGB": 10,
+      "status": "Active"
+    },
+    {
+      "id": "SUB-96435",
+      "phoneNumber": "555-8605",
+      "name": "Dynamic Test User",
+      "plan": "Unlimited",
+      "dataBalanceGB": 10,
+      "status": "Active"
+    },
+    {
+      "id": "545",
       "phoneNumber": "9884010005",
       "name": "Subscriber 5",
       "plan": "Unlimited-Pro",
       "dataBalanceGB": 0,
       "status": "Active"
+    },
+    {
+      "id": "SUB-59357",
+      "phoneNumber": "555-6731",
+      "name": "Dynamic Test User",
+      "plan": "Unlimited",
+      "dataBalanceGB": 10,
+      "status": "Active"
+    },
+    {
+      "id": "SUB-1055",
+      "phoneNumber": "555-4748",
+      "name": "Dynamic Test User",
+      "plan": "Unlimited-5G",
+      "dataBalanceGB": 10,
+      "status": "Active"
+    },
+    {
+      "id": "789",
+      "phoneNumber": "9884010005",
+      "name": "Subscriber 5",
+      "plan": "Unlimited-Pro",
+      "dataBalanceGB": 0,
+      "status": "Active"
+    },
+    {
+      "id": "999",
+      "phoneNumber": "9884010005",
+      "name": "Subscriber 5",
+      "plan": "Unlimited-Pro",
+      "dataBalanceGB": 0,
+      "status": "Active"
+    },
+    {
+      "id": "SUB-80118",
+      "phoneNumber": "555-2336",
+      "name": "Dynamic Test User",
+      "plan": "Unlimited-5G",
+      "dataBalanceGB": 10,
+      "status": "Active"
+    },
+    {
+      "id": "SUB-89893",
+      "phoneNumber": "555-4884",
+      "name": "Dynamic Test User",
+      "plan": "Unlimited-5G",
+      "dataBalanceGB": 10,
+      "status": "Active"
+    },
+    {
+      "id": "SUB-41907",
+      "phoneNumber": "555-7197",
+      "name": "Dynamic Test User",
+      "plan": "Unlimited-5G",
+      "dataBalanceGB": 10,
+      "status": "Active"
+    },
+    {
+      "id": "1001",
+      "phoneNumber": "9884010005",
+      "name": "Subscriber 5",
+      "plan": "Unlimited-Pro",
+      "dataBalanceGB": 110.5,
+      "status": "Active"
     }
   ],
   "transactions": [],
   "usage": {
-    "telecom-secret-2026": 72
+    "telecom-secret-2026": 86
   }
 }
